@@ -59,3 +59,25 @@ jobs:
             BUILD_REVISION=${{ github.sha }}
             BUILD_VERSION=${{ github.sha }}
           push: false
+
+      - name: Build Artifact
+        run: | 
+          echo "hello world" > text.txt
+
+      # Upload an artifact to GitHub
+      - name: Upload Artifact to Github Build Job
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: my-artifact
+          path: text.txt
+
+    deploy:
+      # Download an artifact from GitHub
+      - name: Download Artifact from Github Build Job
+        uses: actions/download-artifact@v2
+        if: success()
+        with:
+          name: my-artifact        
+      - name: deploy  
+        run: text.txt
