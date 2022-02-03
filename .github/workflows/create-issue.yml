@@ -33,7 +33,7 @@ jobs:
           # https://octokit.github.io/rest.js/v18#issues-create
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const create = await github.rest.create({
+            const create = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: "New issue created",
@@ -48,7 +48,7 @@ jobs:
           # https://octokit.github.io/rest.js/v18#issues-create
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.createComment({
+            github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: "${{ steps.create-issue.outputs.result }}",
