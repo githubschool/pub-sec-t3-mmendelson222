@@ -72,7 +72,10 @@ jobs:
           name: my-artifact
           path: text.txt
 
-    deploy:
+  deploy:
+    name: deployment job
+    runs-on: ubintu-latest
+    needs: build
       # Download an artifact from GitHub
       - name: Download Artifact from Github Build Job
         uses: actions/download-artifact@v2
