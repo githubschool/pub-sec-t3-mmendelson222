@@ -15,11 +15,11 @@ name: CodeQl Analysis
 #############################
 # Start the job on all push #
 #############################
-# on:
-#   push:
-#     branches-ignore:
-#       - 'master'
-#       - 'main'
+on:
+  push:
+    branches-ignore:
+      - 'master'
+      - 'main'
 
 ###############
 # Set the Job #
