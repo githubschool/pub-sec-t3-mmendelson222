@@ -1,6 +1,8 @@
 # GitHub-Actions-Docker-training
 [![Continuous Integration](https://github.com/githubschool/pub-sec-t3-mmendelson222/actions/workflows/ci.yml/badge.svg)](https://github.com/githubschool/pub-sec-t3-mmendelson222/actions/workflows/ci.yml)
 
+[![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 Training exercise repository for GitHub Actions using a docker base. This repository should be cloned and used for training purposes. Once cloned, the user can follow the directions inside to help understand how to set up basic and complex **Github Actions**.
 
 ## How to Use
